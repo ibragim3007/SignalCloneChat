@@ -1,21 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, Image, View, TouchableHighlight, FlatList } from 'react-native';
+import { StyleSheet,Button, Text, Image, View, TouchableHighlight, FlatList } from 'react-native';
 import { chatsSection } from '../../Interfaces';
 import ChatItem from './ChatItem';
 
 
-type propsChatList = {
-  chatsSection: chatsSection[]
-}
 
+const ChatsList:React.FC = ( {navigation, route}) => {
 
-const ChatsList:React.FC<propsChatList> = ({chatsSection}) => {
-  
-  console.log(chatsSection)
   return (
     <View style={styles.ChatsList}>
-      <FlatList showsVerticalScrollIndicator={false} data={chatsSection} renderItem={({item}) => (
-        <ChatItem chatInfo={item}/>
+      <FlatList showsVerticalScrollIndicator={false} data={route.params.chatsSection} renderItem={({item}) => (
+        <ChatItem navigation={navigation} chatInfo={item}/>
       )}>
       </FlatList>
     </View>

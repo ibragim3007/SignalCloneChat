@@ -3,16 +3,17 @@ import { StyleSheet, Text, Image, View, TouchableHighlight, Pressable } from 're
 import { chatsSection } from '../../Interfaces';
 
 
-type ChatItemProps = {
-    chatInfo: chatsSection
-}
+const ChatItem:React.FC = ({chatInfo, navigation}) => {
 
-const ChatItem:React.FC<ChatItemProps> = ({chatInfo}) => {
+  const openChatRoom = () => {
+    navigation.navigate('ChatRoom', {chatInfo});
+  }
+
+
   return (
-      <Pressable>
+      <Pressable onPress={openChatRoom}>
         <View style={[styles.wrapperUserWithChat, chatInfo.messagesNotRead ? styles.messageHighLights: null]}>
           <Image style={styles.image} source={{ uri: chatInfo.image}} />
-
           { chatInfo.messagesNotRead ?
           <View style={styles.badgeContainer}>
             <Text style={styles.badgeContainerNumber}>{chatInfo.messagesNotRead}</Text>
