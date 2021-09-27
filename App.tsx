@@ -8,12 +8,11 @@ import { State } from './Redux';
 export default function App() {
 
   return (
-      <NavigatorMenu chatsSection={State.chatsSection}/>
+      <NavigatorMenu chatsSection={State.chatsSection} messages={State.messages}/>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 35,
   },
 });

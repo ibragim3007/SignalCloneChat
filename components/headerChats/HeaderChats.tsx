@@ -40,19 +40,16 @@ const HeaderChats:React.FC = () => {
 const imageSize = 30
 const styles = StyleSheet.create({
     header: { 
-        borderBottomWidth: 1,
-        borderColor: 'rgba(0,0,0,0.2)',
-        paddingHorizontal: 16,
-        paddingVertical: 6,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+        width: '100%',
     },
     image: {
         width: imageSize,
         height: imageSize,
         borderRadius: imageSize / 2,
-        marginLeft: 10
+        marginLeft: 9,
     },
     profleLogin: {
         fontSize: 16,
@@ -68,7 +65,6 @@ const styles = StyleSheet.create({
     },
     icons: {
         paddingHorizontal: 6,
-        paddingVertical: 10,
     }
   });
 
