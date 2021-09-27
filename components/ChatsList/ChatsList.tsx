@@ -14,7 +14,7 @@ const ChatsList:React.FC<propsChatList> = ({chatsSection}) => {
   console.log(chatsSection)
   return (
     <View style={styles.ChatsList}>
-      <FlatList data={chatsSection} renderItem={({item}) => (
+      <FlatList showsVerticalScrollIndicator={false} data={chatsSection} renderItem={({item}) => (
         <ChatItem chatInfo={item}/>
       )}>
       </FlatList>

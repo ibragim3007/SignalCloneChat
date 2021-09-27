@@ -7,12 +7,19 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 const avatarImg = 'https://sun9-67.userapi.com/impg/pvQLlVKXH5-s1w7GaKCBBgMwG7ubTnT4MDlA9w/sE6O7VJ4ZdM.jpg?size=2560x1440&quality=95&sign=54583f12ee6ccec054f1fab552c8dc5c&type=album'
 
 
-const ChatRoom:React.FC = () => {
+const СhatRoom:React.FC = () => {
     return(
-        <View style={styles.header}>
-            
+        <View style={styles.СhatRoom}>
+            <Text>Chat Room!</Text>
         </View>
     )
 }
 
-export default HeaderChats
+const styles = StyleSheet.create({
+    СhatRoom: {
+      paddingHorizontal: 0,
+    },
+  });
+  
+
+export default СhatRoom

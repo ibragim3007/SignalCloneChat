@@ -1,6 +1,7 @@
 export const State = {
     chatsSection : [
         {
+          idChat: 1,
           login: "Kirill Rez",
           image: "https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1",
           lastMessage: "Давид спросил что там по теории вероятность ты не помнишь?",
@@ -8,6 +9,7 @@ export const State = {
           messagesNotRead: 0,
         },
         {
+          idChat: 2,
           login: "David Kodzaev",
           image: "https://sun1-92.userapi.com/s/v1/ig2/usgKdwx3PQ5nlcjd6X8w747aDOLtIofDr4fprRfgb3_jcHfTA7PQly5--oindRygabnsF7vRzsJDHFXxMqbgdaVB.jpg?size=50x50&quality=96&crop=121,85,682,682&ava=1",
           lastMessage: "Эй что там по теории вероятность ты не помнишь?",
@@ -15,6 +17,55 @@ export const State = {
           messagesNotRead: 2,
         },
         {
+          idChat: 3,
+          login: "Timix",
+          image: "https://sun1-14.userapi.com/s/v1/ig2/M6b2Z20j-WGmfSb2yHAg5B2cdgr3g5C214cv0zWaNTy82eihnVuTt9O0wpZ5K4il2W4-cmXHSy5r00TI1tKX-E_q.jpg?size=100x100&quality=95&crop=0,166,864,864&ava=1",
+          lastMessage: "так 7 это число или да?",
+          time: "2:32 AM",
+          messagesNotRead: 1,
+        },
+        {
+          idChat: 4,
+          login: "Kirill Rez",
+          image: "https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1",
+          lastMessage: "Давид спросил что там по теории вероятность ты не помнишь?",
+          time: "1:35 PM",
+          messagesNotRead: 3,
+        },
+        {
+          idChat: 5,
+          login: "David Kodzaev",
+          image: "https://sun1-92.userapi.com/s/v1/ig2/usgKdwx3PQ5nlcjd6X8w747aDOLtIofDr4fprRfgb3_jcHfTA7PQly5--oindRygabnsF7vRzsJDHFXxMqbgdaVB.jpg?size=50x50&quality=96&crop=121,85,682,682&ava=1",
+          lastMessage: "Эй что там по теории вероятность ты не помнишь?",
+          time: "11:11 AM",
+          messagesNotRead: 0,
+        },
+        {
+          idChat: 6,
+          login: "Timix",
+          image: "https://sun1-14.userapi.com/s/v1/ig2/M6b2Z20j-WGmfSb2yHAg5B2cdgr3g5C214cv0zWaNTy82eihnVuTt9O0wpZ5K4il2W4-cmXHSy5r00TI1tKX-E_q.jpg?size=100x100&quality=95&crop=0,166,864,864&ava=1",
+          lastMessage: "так 7 это число или да?",
+          time: "2:32 AM",
+          messagesNotRead: 0,
+        },
+        {
+          idChat: 7,
+          login: "Kirill Rez",
+          image: "https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1",
+          lastMessage: "Давид спросил что там по теории вероятность ты не помнишь?",
+          time: "1:35 PM",
+          messagesNotRead: 1,
+        },
+        {
+          idChat: 8,
+          login: "David Kodzaev",
+          image: "https://sun1-92.userapi.com/s/v1/ig2/usgKdwx3PQ5nlcjd6X8w747aDOLtIofDr4fprRfgb3_jcHfTA7PQly5--oindRygabnsF7vRzsJDHFXxMqbgdaVB.jpg?size=50x50&quality=96&crop=121,85,682,682&ava=1",
+          lastMessage: "Эй что там по теории вероятность ты не помнишь?",
+          time: "11:11 AM",
+          messagesNotRead: 0,
+        },
+        {
+          idChat: 9,
           login: "Timix",
           image: "https://sun1-14.userapi.com/s/v1/ig2/M6b2Z20j-WGmfSb2yHAg5B2cdgr3g5C214cv0zWaNTy82eihnVuTt9O0wpZ5K4il2W4-cmXHSy5r00TI1tKX-E_q.jpg?size=100x100&quality=95&crop=0,166,864,864&ava=1",
           lastMessage: "так 7 это число или да?",

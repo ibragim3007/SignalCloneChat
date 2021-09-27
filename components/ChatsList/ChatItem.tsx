@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, Image, View, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, Image, View, TouchableHighlight, Pressable } from 'react-native';
 import { chatsSection } from '../../Interfaces';
 
 
@@ -9,7 +9,7 @@ type ChatItemProps = {
 
 const ChatItem:React.FC<ChatItemProps> = ({chatInfo}) => {
   return (
-      <TouchableHighlight>
+      <Pressable>
         <View style={[styles.wrapperUserWithChat, chatInfo.messagesNotRead ? styles.messageHighLights: null]}>
           <Image style={styles.image} source={{ uri: chatInfo.image}} />
 
@@ -26,7 +26,7 @@ const ChatItem:React.FC<ChatItemProps> = ({chatInfo}) => {
             <Text numberOfLines={1} style={styles.lastMessage}>{chatInfo.lastMessage}</Text>
           </View>
         </View>
-      </TouchableHighlight>
+      </Pressable>
   );
 }
 
@@ -43,18 +43,21 @@ const styles = StyleSheet.create({
     backgroundColor: 'yellow'
   },
   badgeContainer: {
-    width: 19,
-    height: 19,
+    width: 18,
+    height: 18,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#3872E9',
     position: 'absolute',
     left: 50,
     top: 14,
-    borderRadius: 25
+    borderRadius: 25,
+    borderWidth: 1,
+    borderColor: '#fff'
   },
   badgeContainerNumber: {
-    color: 'white'
+    color: 'white',
+    fontSize: 12,
   },
   wrapperUserWithChat: {
     padding: 15,
