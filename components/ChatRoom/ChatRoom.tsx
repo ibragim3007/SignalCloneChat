@@ -11,8 +11,7 @@ const avatarImg = 'https://sun9-67.userapi.com/impg/pvQLlVKXH5-s1w7GaKCBBgMwG7ub
 
 
 const СhatRoom:React.FC = ({route}) => {
-  route.params.chatInfo.idChat
-  const messagesChat = route.params.messages.filter((message) => message.idChat === route.params.chatInfo.idChat)
+  const messagesChat = route.params.messages.filter((message) => message.infoAboutChat.idChat === route.params.chatInfo.idChat)
     return(
         <View style={styles.СhatRoom}>
           <View style={styles.messages}>

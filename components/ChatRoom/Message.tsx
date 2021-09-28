@@ -14,8 +14,8 @@ const Message: React.FC = ({ message }) => {
         }
         ]}>
             <Text style={[styles.messageText, {color: message.fromMe ? "#222" : '#eee',}]}>
-                {message.messageText}</Text>
-            <Text style={[styles.time, {color: message.fromMe ? "#444" : '#ddd'}]}>{message.time}</Text>
+                {message.infoContent.contentSended}</Text>
+            <Text style={[styles.time, {color: message.fromMe ? "#444" : '#ddd'}]}>{message.infoContent.timeSended}</Text>
         </View>
     )
 }
