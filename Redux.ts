@@ -54,7 +54,257 @@ export const State = {
     {
       fromMe: true,
       infoAboutChat: {
-        idChat: 3,
+        idChat: 1,
+        timeCreatedChat: '23515623',
+        countAllMessagesChat: 3
+      },
+      users: {
+        whoSended: {
+          idUserSended: 1,
+          loginUserSended: 'Ibragim',
+          imageUserWhoSended: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        },
+        forWhoSended: {
+          idUser: 3,
+          loginUser: 'Timix',
+          imageUser: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        }
+      },
+    infoContent: {
+        contentSended: 'Салам',
+        timeSended: '12:11 AM',
+        idMessage: 1
+      }
+    },
+    {
+      fromMe: false,
+      infoAboutChat: {
+        idChat: 1,
+        timeCreatedChat: '23515623',
+        countAllMessagesChat: 3
+      },
+      users: {
+        whoSended: {
+          idUserSended: 2,
+          loginUserSended: 'Kirill Rez',
+          imageUserWhoSended: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        },
+        forWhoSended: {
+          idUser: 1,
+          loginUser: 'Ibragim',
+          imageUser: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        }
+      },
+    infoContent: {
+        contentSended: 'Ты не помнишь что там по физике,',
+        timeSended: '11:11 AM',
+        idMessage: 1
+      }
+    },
+    {
+      fromMe: true,
+      infoAboutChat: {
+        idChat: 1,
+        timeCreatedChat: '23515623',
+        countAllMessagesChat: 3
+      },
+      users: {
+        whoSended: {
+          idUserSended: 1,
+          loginUserSended: 'Ibragim',
+          imageUserWhoSended: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        },
+        forWhoSended: {
+          idUser: 3,
+          loginUser: 'Timix',
+          imageUser: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        }
+      },
+    infoContent: {
+        contentSended: 'Салам',
+        timeSended: '12:11 AM',
+        idMessage: 1
+      }
+    },
+    {
+      fromMe: false,
+      infoAboutChat: {
+        idChat: 1,
+        timeCreatedChat: '23515623',
+        countAllMessagesChat: 3
+      },
+      users: {
+        whoSended: {
+          idUserSended: 2,
+          loginUserSended: 'Kirill Rez',
+          imageUserWhoSended: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        },
+        forWhoSended: {
+          idUser: 1,
+          loginUser: 'Ibragim',
+          imageUser: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        }
+      },
+    infoContent: {
+        contentSended: 'Ты не помнишь что там по физике,',
+        timeSended: '11:11 AM',
+        idMessage: 1
+      }
+    },
+    {
+      fromMe: true,
+      infoAboutChat: {
+        idChat: 1,
+        timeCreatedChat: '23515623',
+        countAllMessagesChat: 3
+      },
+      users: {
+        whoSended: {
+          idUserSended: 1,
+          loginUserSended: 'Ibragim',
+          imageUserWhoSended: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        },
+        forWhoSended: {
+          idUser: 3,
+          loginUser: 'Timix',
+          imageUser: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        }
+      },
+    infoContent: {
+        contentSended: 'Салам',
+        timeSended: '12:11 AM',
+        idMessage: 1
+      }
+    },
+    {
+      fromMe: false,
+      infoAboutChat: {
+        idChat: 1,
+        timeCreatedChat: '23515623',
+        countAllMessagesChat: 3
+      },
+      users: {
+        whoSended: {
+          idUserSended: 2,
+          loginUserSended: 'Kirill Rez',
+          imageUserWhoSended: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        },
+        forWhoSended: {
+          idUser: 1,
+          loginUser: 'Ibragim',
+          imageUser: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        }
+      },
+    infoContent: {
+        contentSended: 'Ты не помнишь что там по физике,',
+        timeSended: '11:11 AM',
+        idMessage: 1
+      }
+    },
+    {
+      fromMe: true,
+      infoAboutChat: {
+        idChat: 1,
+        timeCreatedChat: '23515623',
+        countAllMessagesChat: 3
+      },
+      users: {
+        whoSended: {
+          idUserSended: 1,
+          loginUserSended: 'Ibragim',
+          imageUserWhoSended: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        },
+        forWhoSended: {
+          idUser: 3,
+          loginUser: 'Timix',
+          imageUser: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        }
+      },
+    infoContent: {
+        contentSended: 'Салам',
+        timeSended: '12:11 AM',
+        idMessage: 1
+      }
+    },
+    {
+      fromMe: false,
+      infoAboutChat: {
+        idChat: 1,
+        timeCreatedChat: '23515623',
+        countAllMessagesChat: 3
+      },
+      users: {
+        whoSended: {
+          idUserSended: 2,
+          loginUserSended: 'Kirill Rez',
+          imageUserWhoSended: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        },
+        forWhoSended: {
+          idUser: 1,
+          loginUser: 'Ibragim',
+          imageUser: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        }
+      },
+    infoContent: {
+        contentSended: 'Ты не помнишь что там по физике,',
+        timeSended: '11:11 AM',
+        idMessage: 1
+      }
+    },
+    {
+      fromMe: true,
+      infoAboutChat: {
+        idChat: 1,
+        timeCreatedChat: '23515623',
+        countAllMessagesChat: 3
+      },
+      users: {
+        whoSended: {
+          idUserSended: 1,
+          loginUserSended: 'Ibragim',
+          imageUserWhoSended: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        },
+        forWhoSended: {
+          idUser: 3,
+          loginUser: 'Timix',
+          imageUser: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        }
+      },
+    infoContent: {
+        contentSended: 'Салам',
+        timeSended: '12:11 AM',
+        idMessage: 1
+      }
+    },
+    {
+      fromMe: false,
+      infoAboutChat: {
+        idChat: 1,
+        timeCreatedChat: '23515623',
+        countAllMessagesChat: 3
+      },
+      users: {
+        whoSended: {
+          idUserSended: 2,
+          loginUserSended: 'Kirill Rez',
+          imageUserWhoSended: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        },
+        forWhoSended: {
+          idUser: 1,
+          loginUser: 'Ibragim',
+          imageUser: 'https://sun1-18.userapi.com/s/v1/ig2/ODO4fBo9ohS0zS-1UWQDP_CwMD5GsQ32Q7ag05vFPOk5Ax-GkoZBo7lw3vBCT9pb30-eP-mbSzC2VlavvZQsDUNp.jpg?size=100x100&quality=96&crop=158,159,1000,1000&ava=1',
+        }
+      },
+    infoContent: {
+        contentSended: 'Ты не помнишь что там по физике,',
+        timeSended: '11:11 AM',
+        idMessage: 1
+      }
+    },
+    {
+      fromMe: true,
+      infoAboutChat: {
+        idChat: 1,
         timeCreatedChat: '23515623',
         countAllMessagesChat: 3
       },
