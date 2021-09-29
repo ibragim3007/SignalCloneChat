@@ -8,7 +8,7 @@ import { AuthContext } from './components/Auth/authContext';
 
 export default function App() {
 
-  const [isAuth, setIsAuth] = useState(false)
+  const [isAuth, setIsAuth] = useState(true)
 
   return (
     <AuthContext.Provider value={{isAuth, setIsAuth}}>
