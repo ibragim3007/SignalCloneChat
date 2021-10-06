@@ -28,27 +28,42 @@ const Input: React.FC = () => {
 
     const move = useRef<number>(new Animated.Value(100)).current;
     const upSendButton = useCallback((isConnected: boolean): void => {
-        Animated.timing(move, {
+        Animated.spring(move, {
             toValue:0,
-            duration: 150, 
+            duration: 125, 
             useNativeDriver: true,
         }).start();
     },[move]
     )
 
     const downSendButton = useCallback((isConnected: boolean): void => {
-        Animated.timing(move, {
+        Animated.spring(move, {
             toValue: 100,
-            duration: 150, 
+            duration: 125, 
             useNativeDriver: true,
         }).start();
     },[move]
     )
 
+    // const moveImageIcon = useRef<number>(new Animated.value(100)).current;
+    // const hideImageIcon = useCallback(():void => {
+    //     Anumated.spring(moveImageIcon, {
+    //         toValue: 100,
+    //         duration: 125, 
+    //         useNativeDriver: true,
+    //     })
+    // },[moveImageIcon]
+    // )
+
     return (
         <View style={styles.InputContainer}>
             <TextInput style={styles.Input} value={value} onChangeText={onChange} placeholder={"Напишите сообщение!"} />
             <Animated.View style={{transform: [{translateY: move}]}} >
+            {/* <Icon 
+                name='image'
+                
+                size={25}
+            /> */}
             <Icon
                 name='send'
                 color={colorSendButton}

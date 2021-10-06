@@ -17,12 +17,12 @@ const SignIn = ({navigation, route}) => {
 
     const {isAuth, setIsAuth} = useAuth()
 
-    const handlerRegisterButton = () => {
+    const handlerAuthButton = () => {
         if(loginText && passwordText) Register(loginText, passwordText)
     }
 
     const Register = async (login:string, password:string) => {
-        if(login === "ibragimlol" && password === "ibra3007") {
+        if(login === "1" && password === "1") {
             await AsyncStorage.setItem('token', 'oskdksdfpo')
             setIsAuth(true)
         }
@@ -47,7 +47,7 @@ const SignIn = ({navigation, route}) => {
                     secureTextEntry={true}style={styles.input} 
                     placeholder="Enter your password" 
                 />
-                <Button onPress={handlerRegisterButton} title="Log In" />
+                <Button onPress={handlerAuthButton} title="Log In" />
                 <Button onPress={() => navigation.navigate('Register')} title="Register" />
                 {wrongStatus ? null : <Text>Wrong!</Text>}
             </View>

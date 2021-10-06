@@ -15,7 +15,7 @@ const Message: React.FC = ({ message }) => {
         ]}>
             <Text style={[styles.messageText, {color: message.fromMe ? "#222" : '#eee',}]}>
                 {message.infoContent.contentSended}</Text>
-            <Text style={[styles.time, {color: message.fromMe ? "#444" : '#ddd'}]}>{message.infoContent.timeSended}</Text>
+            <Text style={[styles.time, {color: message.fromMe ? "#777" : '#ddd'}]}>{message.infoContent.timeSended}</Text>
         </View>
     )
 }
@@ -28,14 +28,15 @@ const styles = StyleSheet.create({
         maxWidth: '75%',
         borderRadius: 20,
         margin: 12,
-
     },
     messageText: {
         fontSize: 16
     },
     time: {
         textAlign: 'right',
-        marginRight: 5
+        marginRight: 5,
+        fontSize: 11,
+
     }
 });
 

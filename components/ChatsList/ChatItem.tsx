@@ -9,7 +9,6 @@ const ChatItem:React.FC = ({chatInfo, navigation}) => {
     navigation.navigate('ChatRoom', {chatInfo});
   }
 
-
   return (
       <Pressable onPress={openChatRoom}>
         <View style={[styles.wrapperUserWithChat, chatInfo.messagesNotRead ? styles.messageHighLights: null]}>

@@ -4,7 +4,7 @@ import ChatRoom from '../components/ChatRoom/ChatRoom'
 import ChatList from '../components/ChatsList/ChatsList'
 import { View, Text, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, TransitionSpecs, TransitionPresets, CardStyleInterpolators , HeaderStyleInterpolators } from '@react-navigation/stack';
 import "react-native-gesture-handler"
 import Imessage from '../Interfaces'
 
@@ -15,10 +15,32 @@ type propsChatList = {
   messages: Imessages[]
 }
 
+const config = {
+  animation: 'spring',
+  config: {
+    stiffness: 1000,
+    damping: 500,
+    mass: 3,
+    overshootClamping: false,
+    restDisplacementThreshold: 0.01,
+    restSpeedThreshold: 0.01,
+  },
+};
 const NavigatorMenu:React.FC<propsChatList> = ({chatsSection, messages}) => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          gestureEnabled: true,
+          gestureDirection: "horizontal",
+          cardStyleInterpolator:
+          CardStyleInterpolators.forHorizontalIOS,
+          transitionSpec: {
+            open: config,
+            close: config,
+          }
+        }}
+      >
         <Stack.Screen 
           name='ChatList' 
           component={ChatList}
@@ -31,7 +53,9 @@ const NavigatorMenu:React.FC<propsChatList> = ({chatsSection, messages}) => {
         <Stack.Screen 
           name='ChatRoom' 
           component={ChatRoom}
-          options={{title: 'Chat'}}
+          options={
+            {title: 'Chat'}
+          }
           initialParams={{messages}} 
           />
       </Stack.Navigator>

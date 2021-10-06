@@ -12,8 +12,13 @@ const СhatRoom:React.FC = ({route}) => {
     return(
         <View style={styles.СhatRoom}>
           <View style={styles.messages}>
-            <FlatList progressViewOffset={2} inverted data={messagesChat} renderItem={({item}) => (
-              <Message message={item}/>
+            <FlatList 
+              progressViewOffset={2} 
+              showsVerticalScrollIndicator={false}
+              showsHorizontalScrollIndicator={false}
+              inverted data={messagesChat} 
+              renderItem={({item}) => (
+                <Message message={item}/>
             )}/>  
             <Input />
           </View>
@@ -29,6 +34,7 @@ const styles = StyleSheet.create({
     },
     messages: {
       flex: 1,
+      marginHorizontal: 8,
     },
   });
   
