@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     },
     messages: {
       flex: 1,
-      marginHorizontal: 8,
+      
     },
   });
   

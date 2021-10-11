@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react'
-import { StyleSheet, Animated, Text, View, FlatList, TextInput } from 'react-native'
+import { StyleSheet, Animated, Text, View, FlatList, TextInput, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Message from './Message'
 
@@ -8,7 +8,7 @@ const avatarImg = 'https://sun9-67.userapi.com/impg/pvQLlVKXH5-s1w7GaKCBBgMwG7ub
 
 const Input: React.FC = () => {
 
-    const colorPassive = "#777"
+    const colorPassive = "#555"
     const colorActive = "rgba(42, 142, 229, 1)"
 
     const [value, setValue] = useState('')
@@ -16,59 +16,91 @@ const Input: React.FC = () => {
 
     const onChange = (text: string) => {
         setValue(text)
-        if(text.trim(' ')) {
+        if (text.trim(' ')) {
             setColorSendButton(colorActive)
             upSendButton(false)
+            hideImageIcon(false)
         }
         else {
             setColorSendButton(colorPassive)
             downSendButton(false)
+            ShowImageIcon(false)
         }
     }
 
-    const move = useRef<number>(new Animated.Value(100)).current;
-    const upSendButton = useCallback((isConnected: boolean): void => {
+    const durationAnimationChangeButtonWithStringInInputPole = 30;
+
+    const move = useRef<number>(new Animated.Value(50)).current;
+    const upSendButton = useCallback((): void => {
         Animated.spring(move, {
-            toValue:0,
-            duration: 125, 
+            toValue: 0,
+            duration: durationAnimationChangeButtonWithStringInInputPole,
             useNativeDriver: true,
         }).start();
-    },[move]
+    }, [move]
     )
 
-    const downSendButton = useCallback((isConnected: boolean): void => {
+    const downSendButton = useCallback((): void => {
         Animated.spring(move, {
+            toValue: 50,
+            duration: durationAnimationChangeButtonWithStringInInputPole,
+            useNativeDriver: true,
+        }).start();
+    }, [move]
+    )
+
+    const moveImageIcon = useRef<number>(new Animated.Value(0)).current;
+    const hideImageIcon = useCallback((): void => {
+        Animated.spring(moveImageIcon, {
             toValue: 100,
-            duration: 125, 
+            duration: durationAnimationChangeButtonWithStringInInputPole,
             useNativeDriver: true,
         }).start();
-    },[move]
+    }, [moveImageIcon]
     )
 
-    // const moveImageIcon = useRef<number>(new Animated.value(100)).current;
-    // const hideImageIcon = useCallback(():void => {
-    //     Anumated.spring(moveImageIcon, {
-    //         toValue: 100,
-    //         duration: 125, 
-    //         useNativeDriver: true,
-    //     })
-    // },[moveImageIcon]
-    // )
+    const ShowImageIcon = useCallback((): void => {
+        Animated.spring(moveImageIcon, {
+            toValue: 0,
+            duration: durationAnimationChangeButtonWithStringInInputPole,
+            useNativeDriver: true,
+        }).start();
+    }, [moveImageIcon]
+    )
 
     return (
         <View style={styles.InputContainer}>
+            <TouchableOpacity style={{ paddingLeft: 15 }}>
+                <Icon
+                    name="insert-emoticon"
+                    color={colorPassive}
+                    size={28}
+                />
+            </TouchableOpacity>
             <TextInput style={styles.Input} value={value} onChangeText={onChange} placeholder={"Напишите сообщение!"} />
-            <Animated.View style={{transform: [{translateY: move}]}} >
-            {/* <Icon 
-                name='image'
-                
-                size={25}
-            /> */}
-            <Icon
-                name='send'
-                color={colorSendButton}
-                size={25}  
-            />
+
+            <Animated.View style={{ transform: [{ translateX: moveImageIcon }], position: 'absolute', right: 20 }}>
+                <Icon
+                    name='image'
+                    color={colorPassive}
+                    size={28}
+                />
+            </Animated.View>
+
+            <Animated.View style={{ transform: [{ translateX: moveImageIcon }], position: 'absolute', right: 55 }}>
+                <Icon
+                    name='mic'
+                    color={colorPassive}
+                    size={28}
+                />
+            </Animated.View>
+
+            <Animated.View style={{ transform: [{ translateY: move }], position: 'absolute', right: 20 }} >
+                <Icon
+                    name='send'
+                    color={colorPassive}
+                    size={28}
+                />
             </Animated.View>
         </View>
     )
@@ -81,12 +113,14 @@ const styles = StyleSheet.create({
         paddingRight: 40,
         paddingVertical: 3,
         alignItems: 'center',
-        overflow: 'hidden'
+        overflow: 'hidden',
     },
     Input: {
-        width: '100%',
-        paddingHorizontal: 20,
-        paddingVertical: 5,
+        width: '85%',
+        paddingHorizontal: 10,
+        borderRadius: 10,
+        paddingVertical: 10,
+        fontSize: 17,
     },
 });
 

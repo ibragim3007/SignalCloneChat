@@ -26,8 +26,9 @@ const styles = StyleSheet.create({
     message: {
         padding: 10,
         maxWidth: '75%',
-        borderRadius: 20,
+        borderRadius: 25,
         margin: 12,
+        margin: 5
     },
     messageText: {
         fontSize: 16
@@ -36,7 +37,6 @@ const styles = StyleSheet.create({
         textAlign: 'right',
         marginRight: 5,
         fontSize: 11,
-
     }
 });
 
