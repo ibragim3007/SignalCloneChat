@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { StyleSheet, Text, TextInput, View, Button } from 'react-native'
+import { StyleSheet, Text, TextInput, View, Button, TouchableOpacity } from 'react-native'
 import App from '../../App'
 import ChatsList from './components/ChatsList/ChatsList'
 import HeaderChats from './components/headerChats/HeaderChats'
@@ -8,7 +8,7 @@ import { State } from './Redux'
 import { useAuth } from './useAuth'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import "react-native-gesture-handler"
-
+import { buttonsAuthStyle } from './buttonsAuthStyle'
 
 const SignIn = ({navigation, route}) => {
     const [loginText, setLoginText] = useState('')
@@ -47,8 +47,12 @@ const SignIn = ({navigation, route}) => {
                     secureTextEntry={true}style={styles.input} 
                     placeholder="Enter your password" 
                 />
-                <Button onPress={handlerAuthButton} title="Log In" />
-                <Button onPress={() => navigation.navigate('Register')} title="Register" />
+                <TouchableOpacity style={buttonsAuthStyle.sign} onPress={handlerAuthButton}>
+                    <Text style={[buttonsAuthStyle.textInButtons], {color: '#fff'}}>Log In</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={buttonsAuthStyle.register} onPress={() => navigation.navigate('Register')}>
+                    <Text style={buttonsAuthStyle.textInButtons}>Register</Text>
+                </TouchableOpacity>
                 {wrongStatus ? null : <Text>Wrong!</Text>}
             </View>
         </View>

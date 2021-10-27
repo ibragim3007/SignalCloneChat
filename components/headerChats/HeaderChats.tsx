@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { StyleSheet, Text, View, Image, TouchableHighlight, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 // import { Icon } from 'react-native-vector-icons/Icon'
@@ -9,6 +9,17 @@ const avatarImg = 'https://sun9-67.userapi.com/impg/pvQLlVKXH5-s1w7GaKCBBgMwG7ub
 
 
 const HeaderChats:React.FC = () => {
+
+    const [statusSearch, setStatusSearch] = useState(false)
+
+    const startSearch = () => {
+        if(statusSearch) console.log("Search Allready")
+        else {
+            setStatusSearch(true)
+            console.log("Search...")
+        }
+    }
+
     return(
         <View style={styles.header}>
             <View style={styles.profile}>
@@ -16,7 +27,7 @@ const HeaderChats:React.FC = () => {
                 <Text style={styles.profleLogin}>Ibragim</Text>
             </View>
             <View style={styles.settings}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={startSearch}>
                     <Icon
                         name='search'
                         color='#111' 

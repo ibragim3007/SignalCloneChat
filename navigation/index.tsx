@@ -26,6 +26,7 @@ const config = {
     restSpeedThreshold: 0.01,
   },
 };
+
 const NavigatorMenu:React.FC<propsChatList> = ({chatsSection, messages}) => {
   return (
     <NavigationContainer>

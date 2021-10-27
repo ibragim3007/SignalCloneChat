@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
-import { StyleSheet, Text, TextInput, View, Button } from 'react-native'
+import { StyleSheet, Text, TextInput, View, Button, TouchableOpacity } from 'react-native'
 import ChatsList from './components/ChatsList/ChatsList'
 import HeaderChats from './components/headerChats/HeaderChats'
 import NavigatorMenu from './navigation/index'
 import { State } from './Redux'
+import { buttonsAuthStyle } from './buttonsAuthStyle'
 
 
 const Register = () => {
@@ -41,7 +42,9 @@ const Register = () => {
                     secureTextEntry={true}style={styles.input} 
                     placeholder="repeate password" 
                 />
-                <Button onPress={handlerRegisterButton} title="Log In" />
+                <TouchableOpacity style={buttonsAuthStyle.register} onPress={handlerRegisterButton}>
+                    <Text style={buttonsAuthStyle.textInButtons}>Register</Text>
+                </TouchableOpacity>
             </View>
         </View>
     )
